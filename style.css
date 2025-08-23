@@ -1,0 +1,18 @@
+body { scroll-behavior: smooth; }
+.card { border-radius: 1rem; }
+.btn { border-radius: 0.75rem; }
+#questionCard .option-row {
+  border: 1px solid #e9ecef;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+#gridNav .btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 0.6rem;
+  padding: 0;
+}
+#gridNav .btn.answered { outline: 2px solid rgba(25,135,84,.6); }
+#gridNav .btn.active-question { outline: 2px solid rgba(13,110,253,.6); }

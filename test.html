@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MCQ Test - Exam</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <span class="navbar-brand fw-bold">MCQ Test</span>
+    <div class="ms-auto d-flex align-items-center gap-3">
+      <span class="text-white" id="greeting">Hi, Student</span>
+      <span class="badge bg-light text-dark" id="subjectBadge"></span>
+      <span class="badge bg-warning text-dark">Time Left: <span id="timer">45:00</span></span>
+    </div>
+  </div>
+</nav>
+
+<main class="container py-4">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <div class="card shadow-sm">
+        <div class="card-body p-4">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <div class="text-muted small" id="studentMini"></div>
+            <div class="w-50">
+              <div class="progress" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuemax="25">
+                <div class="progress-bar" id="progressBar" style="width: 0%;">0 / 25</div>
+              </div>
+            </div>
+          </div>
+
+          <div id="questionCard" class="mt-3">
+            <!-- Question renders here -->
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center mt-4">
+            <button class="btn btn-outline-secondary" id="prevBtn">Previous</button>
+            <div class="d-flex gap-2">
+              <button class="btn btn-outline-primary" id="skipBtn" type="button">Skip</button>
+              <button class="btn btn-primary" id="nextBtn">Next</button>
+            </div>
+          </div>
+
+          <div class="text-end mt-3">
+            <button class="btn btn-success" id="submitBtn">Submit Test</button>
+            <p class="text-muted small mt-2 mb-0">Unanswered questions count as incorrect. Auto-submit at 00:00.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card shadow-sm mt-3">
+        <div class="card-body">
+          <div class="d-flex flex-wrap gap-2" id="gridNav">
+            <!-- quick nav buttons 1..25 -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<script src="script.js"></script>
+<script>
+  initTestPage();
+</script>
+</body>
+</html>
