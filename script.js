@@ -141,7 +141,7 @@ function initTestPage() {
  
   const startTime = getSession(SKEY.START);
   const elapsed = Math.floor((Date.now() - startTime) / 1000);
-  state.totalSeconds = Math.max(0, (45 * 60) - elapsed);
+  state.totalSeconds = Math.max(0, (1 * 60) - elapsed);
   startTimer();
 
  
@@ -292,7 +292,7 @@ function finalizeScore(auto = false) {
   for (let i = 0; i < 25; i++) {
     if (state.answers[i] === state.questions[i].ans) score++;
   }
-  const timeUsed = (45 * 60) - state.totalSeconds - 1; // seconds used
+  const timeUsed = (1 * 60) - state.totalSeconds - 1; // seconds used
   saveSession(SKEY.SCORE, score);
   saveSession(SKEY.TIMEUSED, timeUsed);
 
@@ -347,4 +347,5 @@ function initResultPage() {
 
   });
 }
+
 
