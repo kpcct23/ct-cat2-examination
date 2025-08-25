@@ -109,7 +109,7 @@ function initStudentForm() {
 let state = {
   current: 0,
   timerId: null,
-  totalSeconds: 45 * 60, 
+  totalSeconds: 1 * 60, 
   questions: [],
   answers: [],
   subject: "CLOUD"
@@ -347,3 +347,4 @@ function initResultPage() {
 
   });
 }
+
